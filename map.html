@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blackbox World</title>
+    </head>
+    <body>
+    <div class="">
+        <span>Exponent</span>
+        (<span id="exp_slider_disp"></span>):
+        <input id="exp_slider" type="range" min="0" max="1" step="0.01" value="1" onchange="updateEXP(this.value)">
+        <span>Water Level</span>
+        (<span id="water_level_disp"></span>):
+        <input id="water_level" type="range" min="0" max="2" step="0.1" onchange="updateWater(this.value)">
+
+        <input type="button" onclick="seed()" value="seed">
+        <div class="">
+            <input type="button" onclick="navY(-10)" value="up" style="margin-left:20px">
+            <div class="">
+                <input type="button" onclick="navX(-10)" value="left">
+                <input type="button" onclick="navX(10)" value="right">
+            </div>
+                <input type="button" onclick="navY(10)" value="down" style="margin-left:15px">
+        </div>
+
+
+        <!-- <span>Exponent</span>
+        (<span id="exp_slider_disp"></span>):
+        <input id="exp_slider" type="range" min="0" max="10" step="0.1" onchange="updateEXP(this.value)">
+        <span>Exponent</span>
+        (<span id="exp_slider_disp"></span>):
+        <input id="exp_slider" type="range" min="0" max="10" step="0.1" onchange="updateEXP(this.value)"> -->
+
+    </div>
+
+        <canvas id="canvas"></canvas>
+        <script type="text/javascript" src="./noisejs/perlin.js"></script>
+        <script type="text/javascript" src="./map.js"></script>
+    </body>
+</html>
